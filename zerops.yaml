@@ -3,7 +3,7 @@ zerops:
     run:
       base: docker@latest
       prepareCommands:
-        - docker image pull ghcr.io/mhsanaei/3x-ui:TAG
+        - docker image pull ghcr.io/mhsanaei/3x-ui:latest
       start: docker run --network=host -e XRAY_VMESS_AEAD_FORCED=false -v /home/zerops/db:/etc/x-ui ghcr.io/mhsanaei/3x-ui:TAG
       ports:
         - port: 2053
